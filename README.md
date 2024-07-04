@@ -51,3 +51,7 @@ before its underlying SVG drawing functionality can work properly.
 
 The RNAcanvas app can be added to any container node present in the document
 (not just the document body itself as shown in the example above).
+
+# Detailed documentation
+
+See the [full documentation](https://pzhaojohnson.github.io/rnacanvas.app-object/) for the RNAcanvas app object.
