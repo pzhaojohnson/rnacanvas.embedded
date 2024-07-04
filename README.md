@@ -45,3 +45,9 @@ rnaCanvas.drawing.setPadding(500);
 // bring the drawn structure into view
 rnaCanvas.drawingView.fitToContent();
 ```
+
+The RNAcanvas app must be added to the document of a webpage
+before its underlying SVG drawing functionality can work properly.
+
+The RNAcanvas app can be added to any container node that is part of the document
+(not just the document body itself as shown in the example above).
