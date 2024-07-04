@@ -18,7 +18,7 @@ When installed as an `npm` package:
 import { RNAcanvas } from '@rnacanvas/embedded';
 ```
 
-### Drawing a structure
+## Drawing a structure
 
 ```javascript
 // create a new RNAcanvas app instance
