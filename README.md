@@ -2,21 +2,17 @@ Embed the RNAcanvas app in another webpage.
 
 # Quickstart
 
-### Installation
+RNAcanvas can be imported using a `<script>` element.
 
-With `npm`:
-
+```html
+<script type="module" >
+  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@2.0.0/dist/+esm';
+</script>
 ```
-npm install @rnacanvas/embedded
-```
 
-### Imports
+Doing so will inject the `RNAcanvas` app object constructor into the global scope.
 
-When installed as an `npm` package:
-
-```javascript
-import { RNAcanvas } from '@rnacanvas/embedded';
-```
+Alternatively, RNAcanvas is available as an `npm` package (see section below).
 
 ## Drawing a structure
 
@@ -51,6 +47,20 @@ before its underlying SVG drawing functionality can work properly.
 
 The RNAcanvas app can be added to any container node present in the document
 (not just the document body itself as shown in the example above).
+
+## `npm` package
+
+Installation with `npm`:
+
+```
+npm install @rnacanvas/app-object
+```
+
+Importing the `RNAcanvas` app object constructor.
+
+```javascript
+import { RNAcanvas } from '@rnacanvas/app-object';
+```
 
 # Further documentation
 
