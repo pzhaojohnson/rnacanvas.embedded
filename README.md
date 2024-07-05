@@ -1,6 +1,7 @@
 # Quickstart
 
-RNAcanvas can be imported using a `<script>` element.
+The `RNAcanvas` app object constructor
+can be imported using a `<script>` element.
 
 ```html
 <script type="module" >
@@ -8,9 +9,10 @@ RNAcanvas can be imported using a `<script>` element.
 </script>
 ```
 
-Doing so will inject the `RNAcanvas` app object constructor into the global scope.
+This will inject the `RNAcanvas` app object constructor into the global scope.
 
-Alternatively, RNAcanvas is available as an `npm` package (see section below).
+Alternatively, the `RNAcanvas` app object constructor
+can be imported from an `npm` package (see section below).
 
 ## Drawing a structure
 
@@ -52,7 +54,7 @@ The RNAcanvas app can be added to any container node present in the document
 npm install @rnacanvas/app-object
 ```
 
-The `RNAcanvas` app object constructor is accessible as a named import.
+The `RNAcanvas` app object constructor can be accessed as a named import.
 
 ```javascript
 import { RNAcanvas } from '@rnacanvas/app-object';
