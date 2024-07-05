@@ -52,7 +52,7 @@ The RNAcanvas app can be added to any container node present in the document
 npm install @rnacanvas/app-object
 ```
 
-The `RNAcanvas` app object constructor can be accessed as a named import.
+The `RNAcanvas` app object constructor is accessible as a named import.
 
 ```javascript
 import { RNAcanvas } from '@rnacanvas/app-object';
