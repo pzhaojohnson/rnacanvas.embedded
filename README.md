@@ -31,7 +31,7 @@ can be imported from an `npm` package (see section below).
 // create a new RNAcanvas app instance
 var rnaCanvas = new RNAcanvas();
 
-// don't forget to add the RNAcanvas app to the document
+// the RNAcanvas app must be added to the document
 // before drawing anything (see note below)
 rnaCanvas.appendTo(document.body);
 
