@@ -14,7 +14,7 @@ This will inject the `RNAcanvas` app object constructor into the global scope.
 <b>Downstream code must wait for the script to load
 before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
 
-Things like jQuery's `.ready()` method can accomplish this.
+Things like [jQuery](https://releases.jquery.com/)'s `.ready()` method can accomplish this.
 
 ```javascript
 $('#RNAcanvas').ready(() => {
