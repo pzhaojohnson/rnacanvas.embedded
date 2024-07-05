@@ -18,7 +18,7 @@ Things like jQuery's `.ready()` method can accomplish this.
 
 ```javascript
 $(document).ready(() => {
- // RNA drawing code here...
+  // RNA drawing code here...
 });
 ```
 
