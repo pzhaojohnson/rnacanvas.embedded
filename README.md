@@ -26,7 +26,7 @@ rnaCanvas.appendTo(document.body);
 rnaCanvas.style.width = '1000px';
 rnaCanvas.style.height = '750px';
 
-// the structure to draw (expressed in dot-bracket notation)
+// the structure to draw (using dot-bracket notation)
 var seq = 'AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC';
 var dotBracket = '(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....';
 
