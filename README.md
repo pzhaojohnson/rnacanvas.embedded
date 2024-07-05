@@ -4,7 +4,7 @@ The `RNAcanvas` app object constructor
 can be imported using a `<script>` element.
 
 ```html
-<script type="module" >
+<script id="RNAcanvas" type="module" >
   import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@2.0.2/dist/+esm';
 </script>
 ```
@@ -17,7 +17,7 @@ before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
 Things like jQuery's `.ready()` method can accomplish this.
 
 ```javascript
-$(document).ready(() => {
+$('#RNAcanvas').ready(() => {
   // RNA drawing code here...
 });
 ```
