@@ -22,15 +22,15 @@ import { RNAcanvas } from '@rnacanvas/embedded';
 
 ```javascript
 // create a new RNAcanvas app instance
-var rnaCanvas = RNAcanvas();
+var rnaCanvas = new RNAcanvas();
 
 // don't forget to add the RNAcanvas app to the document
 // before drawing anything (see note below)
 rnaCanvas.appendTo(document.body);
 
 // control the size of the RNAcanvas app component
-rnaCanvas.style.width = '600px';
-rnaCanvas.style.height = '450px';
+rnaCanvas.style.width = '1000px';
+rnaCanvas.style.height = '750px';
 
 // the structure to draw (expressed in dot-bracket notation)
 var seq = 'AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC';
