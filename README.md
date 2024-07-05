@@ -46,15 +46,13 @@ before its underlying SVG drawing functionality can work properly.
 The RNAcanvas app can be added to any container node present in the document
 (not just the document body itself as shown in the example above).
 
-## The `npm` package
-
-Installation with `npm`:
+## `npm` installation
 
 ```
 npm install @rnacanvas/app-object
 ```
 
-Importing the `RNAcanvas` app object constructor.
+The `RNAcanvas` app object constructor can be accessed as a named import.
 
 ```javascript
 import { RNAcanvas } from '@rnacanvas/app-object';
