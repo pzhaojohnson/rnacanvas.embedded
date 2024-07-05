@@ -4,7 +4,7 @@ RNAcanvas can be imported using a `<script>` element.
 
 ```html
 <script type="module" >
-  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@2.0.0/dist/+esm';
+  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@2.0.2/dist/+esm';
 </script>
 ```
 
