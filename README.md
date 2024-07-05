@@ -12,8 +12,7 @@ can be imported using a `<script>` element.
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
 Alternatively, the `RNAcanvas` app object constructor
-can be imported from an `npm` package
-(see [section](https://github.com/pzhaojohnson/rnacanvas.embedded/tree/main?tab=readme-ov-file#npm-installation) below).
+can be imported from an `npm` package (see section below).
 
 ## Drawing a structure
 
