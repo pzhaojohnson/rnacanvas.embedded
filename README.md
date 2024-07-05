@@ -12,7 +12,7 @@ can be loaded using a `<script>` element.
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
 <b>Downstream code must wait for the script to load
-before RNAcanvas functionality can be used.</b>
+before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
 
 Things like jQuery's `.ready()` method can accomplish this.
 
