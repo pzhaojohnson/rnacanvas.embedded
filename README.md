@@ -1,7 +1,7 @@
 # Quickstart
 
 The `RNAcanvas` app object constructor
-can be imported using a `<script>` element.
+can be loaded using a `<script>` element.
 
 ```html
 <script id="RNAcanvas" type="module" >
@@ -12,7 +12,7 @@ can be imported using a `<script>` element.
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
 <b>Downstream code must wait for the script to load
-before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
+before RNAcanvas functionality can be used.</b>
 
 Things like jQuery's `.ready()` method can accomplish this.
 
