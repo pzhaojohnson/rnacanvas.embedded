@@ -1,5 +1,3 @@
-Embed the RNAcanvas app in another webpage.
-
 # Quickstart
 
 RNAcanvas can be imported using a `<script>` element.
@@ -48,7 +46,7 @@ before its underlying SVG drawing functionality can work properly.
 The RNAcanvas app can be added to any container node present in the document
 (not just the document body itself as shown in the example above).
 
-## `npm` package
+## The `npm` package
 
 Installation with `npm`:
 
