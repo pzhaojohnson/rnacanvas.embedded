@@ -11,6 +11,17 @@ can be imported using a `<script>` element.
 
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
+<b>Downstream code must wait for the script to be fully loaded
+before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
+
+Things like jQuery's `.ready()` method can accomplish this.
+
+```javascript
+$(document).ready(() => {
+ // RNA drawing code here...
+});
+```
+
 Alternatively, the `RNAcanvas` app object constructor
 can be imported from an `npm` package (see section below).
 
