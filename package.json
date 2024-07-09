@@ -1,6 +1,6 @@
 {
   "name": "@rnacanvas/embedded",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Embed RNAcanvas in a webpage",
   "repository": {
     "type": "git",
