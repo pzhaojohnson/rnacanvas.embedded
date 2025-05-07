@@ -1,4 +1,4 @@
-Here's a [live example](https://codepen.io/pzjohnson/full/xxoKvGp) on CodePen.
+Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
 
 # Quickstart
 
@@ -7,16 +7,16 @@ can be loaded using a `<script>` element.
 
 ```html
 <script id="RNAcanvas" type="module" >
-  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@2.0.2/dist/+esm';
+  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@3.0.0/dist/+esm';
 </script>
 ```
 
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
-<b>Downstream code must wait for the script to load
-before the</b> `RNAcanvas` <b>app object constructor can be used.</b>
+<b>Downstream code must wait for the script to be loaded
+before using the</b> `RNAcanvas` <b>app object constructor.</b>
 
-Things like [jQuery](https://releases.jquery.com/)'s `.ready()` method can accomplish this.
+Things like [jQuery](https://releases.jquery.com/)'s `.ready()` method can be used for this.
 
 ```javascript
 $('#RNAcanvas').ready(() => {
@@ -38,8 +38,8 @@ var rnaCanvas = new RNAcanvas();
 rnaCanvas.appendTo(document.body);
 
 // control the size of the RNAcanvas app component
-rnaCanvas.style.width = '1000px';
-rnaCanvas.style.height = '750px';
+rnaCanvas.domNode.style.width = '1000px';
+rnaCanvas.domNode.style.height = '750px';
 
 // the structure to draw (using dot-bracket notation)
 var seq = 'AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC';
@@ -49,16 +49,18 @@ rnaCanvas.drawDotBracket(seq, dotBracket);
 
 // make the drawing big enough to fit the drawn structure
 // (and include some extra space around the drawn structure)
-rnaCanvas.drawing.setPadding(500);
+rnaCanvas.drawing.setPadding(1000);
 
 // bring the drawn structure into view
 rnaCanvas.drawingView.fitToContent();
 ```
 
-The RNAcanvas app must be added to the document of a webpage
-before its underlying SVG drawing functionality can work properly.
+The RNAcanvas app must be added to the document body of a webpage
+for its RNA drawing functionality to work properly.
 
-The RNAcanvas app can be added to any container node present in the document
+(This is an inherent aspect of SVG drawing functionality in general for web browsers.)
+
+The RNAcanvas app can be added to any container node present in the document body
 (not just the document body itself as shown in the example above).
 
 ## `npm` installation
