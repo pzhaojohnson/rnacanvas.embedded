@@ -13,10 +13,10 @@ can be loaded using a `<script>` element.
 
 This will inject the `RNAcanvas` app object constructor into the global scope.
 
-<b>Downstream code must wait for the script to be loaded
+<b>Downstream code must wait for the script to load
 before using the</b> `RNAcanvas` <b>app object constructor.</b>
 
-Things like [jQuery](https://releases.jquery.com/)'s `.ready()` method can be used for this.
+Things like [jQuery](https://releases.jquery.com/)'s `.ready()` method can accomplish this.
 
 ```javascript
 $('#RNAcanvas').ready(() => {
