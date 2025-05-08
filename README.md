@@ -7,7 +7,7 @@ can be loaded using a `<script>` element.
 
 ```html
 <script id="RNAcanvas" type="module" >
-  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@3.0.0/dist/+esm';
+  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@3.0.0';
 </script>
 ```
 
@@ -33,7 +33,7 @@ can be imported from an `npm` package (see section below).
 // create a new RNAcanvas app instance
 var rnaCanvas = new RNAcanvas();
 
-// the RNAcanvas app must be added to the document
+// the RNAcanvas app must be added to the document body
 // before drawing anything (see note below)
 rnaCanvas.appendTo(document.body);
 
