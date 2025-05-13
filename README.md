@@ -7,7 +7,7 @@ can be loaded using a `<script>` element.
 
 ```html
 <script id="RNAcanvas" type="module" >
-  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@3.0.0';
+  import 'https://cdn.jsdelivr.net/npm/@rnacanvas/embedded@3.0.1';
 </script>
 ```
 
