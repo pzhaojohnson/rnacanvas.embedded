@@ -2,6 +2,38 @@ Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
 
 # Quickstart
 
+For example, to draw the following structure...
+
+```
+AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC
+(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....
+```
+
+...one would set the `src` attribute of an `<iframe>` element to the following.
+
+```javascript
+var src = 'https://code.rnacanvas.app?'
+  + `sequence=${AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC}`
+  + `&dot_bracket=${(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....}`
+```
+
+The resulting HTML code for the `<iframe>` element would be:
+
+```html
+<iframe
+  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=${(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
+  width="800"
+  height="600"
+></iframe>
+```
+
+# The RNAcanvas app object
+
+An alternative way to make 2D drawings of RNA structures
+is using the JavaScript / TypeScript interface of the RNAcanvas app object.
+
+Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
+
 The `RNAcanvas` app object constructor
 can be loaded using a `<script>` element.
 
