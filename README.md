@@ -1,4 +1,4 @@
-Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
+Here's a [live example](https://codepen.io/pzjohnson/pen/myezpzK) on CodePen.
 
 # Quickstart
 
