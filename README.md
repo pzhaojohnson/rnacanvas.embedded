@@ -99,7 +99,7 @@ Alternatively, the border can be styled as with any HTML element.
 ></iframe>
 ```
 
-## Coloring bases according to data
+# Coloring bases according to data
 
 Bases can be given colored outlines according to data
 (e.g., base-pair probability data, positional entropy data)
@@ -108,7 +108,7 @@ using the `data` URL parameter.
 See the [Coloring bases according data](https://pzhaojohnson.github.io/rnacanvas.url-interface/) section
 of the RNAcanvas URL interface documentation.
 
-# The RNAcanvas app object
+# Advanced methods
 
 An alternative way to make 2D drawings of RNA structures
 is using the JavaScript / TypeScript interface of the RNAcanvas app object.
