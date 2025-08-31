@@ -12,18 +12,71 @@ AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC
 ...one would set the `src` attribute of an `<iframe>` element to the following.
 
 ```javascript
+// JavaScript code to construct the `src` attribute
 var src = 'https://code.rnacanvas.app?'
-  + `sequence=${AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC}`
-  + `&dot_bracket=${(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....}`
+  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
+  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....';
 ```
 
-The resulting HTML code for the `<iframe>` element would be:
+The resulting `<iframe>` element would be:
 
 ```html
 <iframe
-  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=${(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
+  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
+
+  <!-- The dimensions of the RNA structure drawing. -->
   width="800"
   height="600"
+></iframe>
+```
+
+In this case, we are making use of the RNAcanvas [URL interface](https://pzhaojohnson.github.io/rnacanvas.url-interface/)
+and the `sequence` and `dot_bracket` URL parameters to draw a structure of interest.
+
+## Hiding the peripheral UI
+
+To hide things like the lower-left Toolbar and top-left `Open`, `Save` and `Export` buttons,
+one can set the `peripheral_ui` URL parameter to `none`.
+
+```javascript
+// JavaScript code to construct the `src` attribute
+var src = 'https://code.rnacanvas.app?'
+  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
+  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....'
+
+  // set to "none"
+  + '&peripheral_ui=none';
+```
+
+## Hiding / styling the border
+
+By default, `<iframe>` elements usually have an indented gray border.
+
+To hide this, one can set the `border` CSS property to `none`.
+
+```html
+<iframe
+  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
+
+  width="800"
+  height="600"
+
+  <!-- Hide the border. -->
+  style="border: none;"
+></iframe>
+```
+
+Alternatively, the border can be styled as for any HTML element.
+
+```html
+<iframe
+  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
+
+  width="800"
+  height="600"
+
+  <!-- Light gray border. -->
+  style="border: 1px solid #bbb;"
 ></iframe>
 ```
 
