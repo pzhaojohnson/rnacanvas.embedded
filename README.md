@@ -106,14 +106,20 @@ Bases can be given colored outlines according to data
 using the `data` URL parameter.
 
 See the [Coloring bases according data](https://pzhaojohnson.github.io/rnacanvas.url-interface/) section
-of the RNAcanvas URL interface documentation.
+of the RNAcanvas URL interface documentation for more information.
 
 # Advanced methods
 
-An alternative way to make 2D drawings of RNA structures
-is using the JavaScript / TypeScript interface of the RNAcanvas app object.
+The JavaScript / TypeScript interface of the RNAcanvas app object
+can also be used to draw nucleic acid structures.
 
 Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
+
+Usage of the JavaScript / TypeScript interface
+allows for granular control over nucleic acid structure drawings
+(e.g., the coloring and layout of bases).
+
+### Loading the RNAcanvas app object constructor
 
 The `RNAcanvas` app object constructor
 can be loaded using a `<script>` element.
@@ -137,8 +143,11 @@ $('#RNAcanvas').ready(() => {
 });
 ```
 
-Alternatively, the `RNAcanvas` app object constructor
-can be imported from an `npm` package (see section below).
+Alternatively, an `npm` package is also available
+for direct bundling of the `RNAcanvas` package with one's webpage.
+
+See the documentation for the RNAcanvas [app object](https://pzhaojohnson.github.io/rnacanvas.app-object/)
+for more information.
 
 ## Drawing a structure
 
@@ -175,19 +184,3 @@ for its RNA drawing functionality to work properly.
 
 The RNAcanvas app can be added to any container node present in the document body
 (not just the document body itself as shown in the example above).
-
-## `npm` installation
-
-```
-npm install @rnacanvas/app-object
-```
-
-The `RNAcanvas` app object constructor can be accessed as a named import.
-
-```javascript
-import { RNAcanvas } from '@rnacanvas/app-object';
-```
-
-# Further documentation
-
-See the [full documentation](https://pzhaojohnson.github.io/rnacanvas.app-object/) for the RNAcanvas app object.
