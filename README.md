@@ -65,7 +65,7 @@ var src = 'https://code.rnacanvas.app?'
 
 This will result in a top-right `Edit` button being shown,
 which when clicked will reopen the drawing in a new tab of RNAcanvas
-with the full peripheral UI being shown.
+possessing the full peripheral UI.
 
 ### Hiding / styling the border
 
@@ -98,6 +98,15 @@ Alternatively, the border can be styled as with any HTML element.
   style="border: 1px solid #bbb;"
 ></iframe>
 ```
+
+## Coloring bases according to data
+
+Bases can be given colored outlines according to data
+(e.g., base-pair probability data, positional entropy data)
+using the `data` URL parameter.
+
+See the [Coloring bases according data](https://pzhaojohnson.github.io/rnacanvas.url-interface/) section
+of the RNAcanvas URL interface documentation.
 
 # The RNAcanvas app object
 
