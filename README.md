@@ -31,12 +31,12 @@ The resulting `<iframe>` element would be:
 ```
 
 In this case, we are making use of the RNAcanvas [URL interface](https://pzhaojohnson.github.io/rnacanvas.url-interface/)
-and the `sequence` and `dot_bracket` URL parameters to draw a structure of interest.
+and the `sequence` and `dot_bracket` URL parameters.
 
-## Hiding the peripheral UI
+### Hiding the peripheral UI
 
 To hide things like the lower-left Toolbar and top-left `Open`, `Save` and `Export` buttons,
-one can set the `peripheral_ui` URL parameter to `none`.
+set the `peripheral_ui` URL parameter to `none`.
 
 ```javascript
 // JavaScript code to construct the `src` attribute
@@ -48,7 +48,26 @@ var src = 'https://code.rnacanvas.app?'
   + '&peripheral_ui=none';
 ```
 
-## Hiding / styling the border
+### Showing a minimal peripheral UI
+
+To show a minimalistic peripheral UI,
+set the `peripheral_ui` URL parameter to `minimal`.
+
+```javascript
+// JavaScript code to construct the `src` attribute
+var src = 'https://code.rnacanvas.app?'
+  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
+  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....'
+
+  // set to "minimal"
+  + '&peripheral_ui=minimal';
+```
+
+This will result in a top-right `Edit` button being shown,
+which when clicked will reopen the drawing in a new tab of RNAcanvas
+with the full peripheral UI being shown.
+
+### Hiding / styling the border
 
 By default, `<iframe>` elements usually have an indented gray border.
 
@@ -66,7 +85,7 @@ To hide this, one can set the `border` CSS property to `none`.
 ></iframe>
 ```
 
-Alternatively, the border can be styled as for any HTML element.
+Alternatively, the border can be styled as with any HTML element.
 
 ```html
 <iframe
