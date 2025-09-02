@@ -1,125 +1,6 @@
-Here's a [live example](https://codepen.io/pzjohnson/pen/myezpzK) on CodePen.
-
-# Quickstart
-
-For example, to draw the following structure...
-
-```
-AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC
-(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....
-```
-
-...one would set the `src` attribute of an `<iframe>` element to the following.
-
-```javascript
-// JavaScript code to construct the `src` attribute
-var src = 'https://code.rnacanvas.app?'
-  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
-  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....';
-```
-
-The resulting `<iframe>` element would be:
-
-```html
-<iframe
-  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
-
-  <!-- The dimensions of the RNA structure drawing. -->
-  width="800"
-  height="600"
-></iframe>
-```
-
-In this case, we are making use of the RNAcanvas [URL interface](https://pzhaojohnson.github.io/rnacanvas.url-interface/)
-and the `sequence` and `dot_bracket` URL parameters.
-
-### Hiding the peripheral UI
-
-To hide things like the lower-left Toolbar and top-left `Open`, `Save` and `Export` buttons,
-set the `peripheral_ui` URL parameter to `none`.
-
-```javascript
-// JavaScript code to construct the `src` attribute
-var src = 'https://code.rnacanvas.app?'
-  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
-  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....'
-
-  // set to "none"
-  + '&peripheral_ui=none';
-```
-
-### Showing a minimal peripheral UI
-
-To show a minimalistic peripheral UI,
-set the `peripheral_ui` URL parameter to `minimal`.
-
-```javascript
-// JavaScript code to construct the `src` attribute
-var src = 'https://code.rnacanvas.app?'
-  + 'sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC'
-  + '&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..))))))))))).....'
-
-  // set to "minimal"
-  + '&peripheral_ui=minimal';
-```
-
-This will result in a top-right `Edit` button being shown,
-which when clicked will reopen the drawing in a new tab of RNAcanvas
-possessing the full peripheral UI.
-
-### Hiding / styling the border
-
-By default, `<iframe>` elements usually have an indented gray border.
-
-To hide this, one can set the `border` CSS property to `none`.
-
-```html
-<iframe
-  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
-
-  width="800"
-  height="600"
-
-  <!-- Hide the border. -->
-  style="border: none;"
-></iframe>
-```
-
-Alternatively, the border can be styled as with any HTML element.
-
-```html
-<iframe
-  src="https://code.rnacanvas.app?sequence=AGAGUAGCAUUCUGCUUUAGACUGUUAACUUUAUGAACCACGCGUGUCACGUGGGGAGAGUUAACAGCGCCC&dot_bracket=(((((((....)))))))...(((((((((((.....(((((.......)))))..)))))))))))....."
-
-  width="800"
-  height="600"
-
-  <!-- Light gray border. -->
-  style="border: 1px solid #bbb;"
-></iframe>
-```
-
-# Coloring bases according to data
-
-Bases can be given colored outlines according to data
-(e.g., base-pair probability data, positional entropy data)
-using the `data` URL parameter.
-
-See the [Coloring bases according data](https://pzhaojohnson.github.io/rnacanvas.url-interface/) section
-of the RNAcanvas URL interface documentation for more information.
-
-# Advanced methods
-
-The JavaScript / TypeScript interface of the RNAcanvas app object
-can also be used to draw nucleic acid structures.
-
 Here's a [live example](https://codepen.io/pzjohnson/pen/xxoKvGp) on CodePen.
 
-Usage of the JavaScript / TypeScript interface
-allows for granular control over nucleic acid structure drawings
-(e.g., the coloring and layout of bases).
-
-### Loading the RNAcanvas app object constructor
+# Quickstart
 
 The `RNAcanvas` app object constructor
 can be loaded using a `<script>` element.
@@ -143,11 +24,8 @@ $('#RNAcanvas').ready(() => {
 });
 ```
 
-Alternatively, an `npm` package is also available
-for direct bundling of the `RNAcanvas` package with one's webpage.
-
-See the documentation for the RNAcanvas [app object](https://pzhaojohnson.github.io/rnacanvas.app-object/)
-for more information.
+Alternatively, the `RNAcanvas` app object constructor
+can be imported from an `npm` package (see section below).
 
 ## Drawing a structure
 
@@ -184,3 +62,19 @@ for its RNA drawing functionality to work properly.
 
 The RNAcanvas app can be added to any container node present in the document body
 (not just the document body itself as shown in the example above).
+
+## `npm` installation
+
+```
+npm install @rnacanvas/app-object
+```
+
+The `RNAcanvas` app object constructor can be accessed as a named import.
+
+```javascript
+import { RNAcanvas } from '@rnacanvas/app-object';
+```
+
+# Further documentation
+
+See the [full documentation](https://pzhaojohnson.github.io/rnacanvas.app-object/) for the RNAcanvas app object.
